@@ -6,4 +6,6 @@ set(CMAKE_CXX_FLAGS "-Wall -Wextra -Wconversion -Wsign-conversion -pedantic")
 
 add_executable(HEIGVD_PRG1_CRIBLE main.cpp
                                   saisieUtilisateur.h
-                                  saisieUtilisateur.cpp)
+                                  saisieUtilisateur.cpp
+                                  crible.h
+                                  crible.cpp)
