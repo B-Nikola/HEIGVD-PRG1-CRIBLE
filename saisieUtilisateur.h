@@ -23,7 +23,7 @@ Assertions     : (borneInf <= borneSup) uniquement saisies non- binaires :
                    Solution : Contrôler l'ordre des bornes dans l'appel de la
                               fonction.
 
-Modifications  : - Aucune depuis la création.
+Modifications  : n/a
 
 Compilateur    : Mingw-w64 g++ 11.2.0
 -----------------------------------------------------------------------------------

@@ -25,15 +25,18 @@ Compilateur : Mingw-w64 g++ 11.1.0
 #include <cstdlib>
 #include <iostream>
 #include <limits>
+#include "crible.h"
+#include "saisieUtilisateur.h"
 
 using namespace std;
 int main() {
     // Début de programme
-    cout << "Bienvenue";
+    cout << "Bienvenue" << endl;
 
     //Entrée user
-
-
+   cribler(
+      50
+      );
 
     // fin de programme
     cout << "Presser ENTER pour quitter";

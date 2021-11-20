@@ -18,7 +18,7 @@ Remarque(s)    : Saisie contrôlée :
                    supérieure ou droite. Quitte le programme et affiche une
                    erreur d'assertion.
 
-Modifications  : - Aucune depuis la création.
+Modifications  : n/a
 
 Compilateur    : Mingw-w64 g++ 11.2.0
 -----------------------------------------------------------------------------------
@@ -41,7 +41,7 @@ int saisieControlee(int borneInf, int borneSup,
    int saisie;
    do {
       // Affiche le message de saisie ainsi que les bornes
-      cout << MESSAGE_SAISIE << " [" << borneInf << "|" << borneSup << "] : ";
+      cout << MESSAGE_SAISIE << " [" << borneInf << ".." << borneSup << "] : ";
       cin  >> saisie;
 
       // Contrôle que la valeur soit dans les bornes

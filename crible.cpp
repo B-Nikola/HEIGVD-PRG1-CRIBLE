@@ -5,18 +5,23 @@ Nom du labo    : HEIGVD-PRG1-CRIBLE
 Auteur(s)      : Jérémie Métrailler, Nikola Bouattit
 Date creation  : 19.11.2021
 
-Description    :
+Description    : Corps de la librairie crible. Il exisite dans le corps de cette librairie des fonctions qui ne sont
+                 pas mise à disposition de l'utilisateur comme par exemple remplirTableau, chercherMutliple et
+                 supprimerMultiple.
 
-Remarque(s)    :
+Remarque(s)    : Les fonctions listées précédemment ne sont pas mise à disposition de l'utilisateur car elles sont
+                 spécifiques à cette librairie et cela n'aurait pas de sens et compliquerait la tâche de l'utilisateur
+                 de les lui faire utiliser
 
-Assertions     :
+Assertions     : n/a
 
-Modifications  : - Aucune depuis la création.
+Modifications  : n/a
 
 Compilateur    : Mingw-w64 g++ 11.2.0
 -----------------------------------------------------------------------------------
 */
 #include "crible.h"
+#include <iostream>
 
 /**
  * @Nom             : remplirTableau
@@ -36,43 +41,66 @@ void remplirTableau(int tab[], unsigned capacite);
  * @return          : La position du multiple
  */
 unsigned chercherMultiple(const int tab[], unsigned taille, int diviseur,
-                      unsigned pos = 0);
+                          unsigned pos = 0);
 
 /**
  * @Nom             : supprimerMultiple
  * @But             : Supprime tous les multiples d'un diviseur passé en paramètre
  *                    contenu dans un tableau
  * @param tab       : Tableau à parcourir
- * @param diviseur  : Diviseur permettant de supprimer tous ses mutliples
+ * @param taille    : Taille du tableau
+ * @param pos       : Position de l'élément à supprimer
  */
-void supprimerMultiple(int tab[], unsigned diviseur);
+void supprimerMultiple(int tab[], unsigned& taille, unsigned pos);
 
-void cribler(unsigned capacite) {
-   int tabNbPremiers[capacite];
-   remplirTableau(tabNbPremiers, capacite);
-   unsigned taille = capacite; // le tableau est plein
+void cribler(unsigned nbLimite) {
+   // La capacité du tableau est égal au nombre limite - 1 car on commence à compter à partir de 1 mais le tableau
+   // sera rempli à partir du nombre 2 car 1 est une exception dans les nombre premiers
+   const unsigned CAPACITE = nbLimite - 1;
+   int tabNbPremiers[CAPACITE];
+   unsigned taille = CAPACITE; // le tableau est plein
+
+   remplirTableau(tabNbPremiers, CAPACITE);
 
    unsigned pos = 0;
-   for (int diviseur = 2; diviseur <= capacite; ++diviseur) {
-      for (int i = 0; i < taille; ++i) {
-         chercherMultiple(tabNbPremiers, taille, diviseur, pos);
+   for (int diviseur = 2; diviseur <= taille; ++diviseur) {
+      while ( (pos = chercherMultiple(tabNbPremiers, taille, diviseur, pos)) != taille ) {
+         supprimerMultiple(tabNbPremiers, taille, pos);
+         ++pos; // chercher à partir de la position suivant celle trouvée
       }
+      pos = 0; // réinitialisation de la position
+   }
+
+   for (int i = 0 ; i < taille; ++i) {
+      std::cout << tabNbPremiers[i] << std::endl;
    }
 }
 
 void remplirTableau(int tab[], unsigned taille) {
-   for (unsigned i = 2; i < taille; ++i) {
-      tab[i] = i;
+   for (unsigned i = 0; i < taille; ++i) {
+      tab[i] = i + 2;
    }
 }
 
 
 unsigned chercherMultiple(const int tab[], unsigned taille, int diviseur,
-                      unsigned pos) {
+                          unsigned pos) {
+
+   for ( ; pos < taille; ++pos) {
+      if (diviseur != tab[pos] and tab[pos] % diviseur == 0) {
+         return pos;
+      }
+   }
+   return taille;
 
 }
 
-void supprimerMultiple(int tab[], unsigned diviseur) {
-
+void supprimerMultiple(int tab[], unsigned& taille, unsigned pos) {
+   if (pos < taille) {
+      for (unsigned i = pos + 1; i < taille; ++i) {
+         tab[i - 1] = tab[i];
+      }
+      --taille;
+   }
 }
 
