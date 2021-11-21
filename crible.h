@@ -28,6 +28,6 @@ Compilateur    : Mingw-w64 g++ 11.2.0
  *                    qui ne sont pas des nombre premiers jusqu'au nombre limite passé en paramètre
  * @param nbLimite  : Nombre jusqu'au quel il faut trouver les nombre premiers
  */
-void cribler(unsigned nbLimite);
+void cribler(int tabNbPremiers[], unsigned nbLimite, unsigned& taille);
 
 #endif

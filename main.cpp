@@ -18,28 +18,54 @@ Description :
 
 Remarque(s) :
 
-               
-Compilateur : Mingw-w64 g++ 11.1.0
+
+Compilateur : Mingw-w64 g++ 11.2.0
 -----------------------------------------------------------------------------------
 */
-#include <cstdlib>
-#include <iostream>
-#include <limits>
+#include <cstdlib>   // Nécéssaire pour le EXIT_SUCCESS
+#include <iostream>  // Nécéssaire pour l'affichage dans la console
+#include <limits>    // Nécéssaire pour vidage du buffer
 #include "crible.h"
+#include "affichageTableau.h"
 #include "saisieUtilisateur.h"
+
 
 using namespace std;
 int main() {
     // Début de programme
     cout << "Bienvenue" << endl;
 
-    //Entrée user
-   cribler(
-      50
-      );
+
+   const int      LIM_INFERIEUR = 2;
+   const int      LIM_SUPERIEUR = 100;
+   const int      NB_COLONNE    = 10;
+   const string   MSG_SAISIE = "Veuiller rentrer le nombre de valeur a generer ";
+   const string   MSG_ERREUR = "Erreur veuillez saisir une valeur comprise dans les "
+                             "limites ";
+
+   const unsigned int TAILLE_TABLEAU = (unsigned)saisieControlee( LIM_INFERIEUR,
+                                                                  LIM_SUPERIEUR,
+                                                                  MSG_SAISIE,
+                                                                  MSG_ERREUR);
+
+   int tabNbPremiers[TAILLE_TABLEAU];
+   unsigned int taille = 0 ;
+
+    //Criblage du tableau
+   cribler( tabNbPremiers,
+            TAILLE_TABLEAU,
+            taille);
+
+   //Affichage
+   cout << "initialisation du tableau" << endl;
+   afficherTableau(TAILLE_TABLEAU,NB_COLONNE);
+   cout << endl<< "Criblage du tableau" << endl;
+   afficherTableau(TAILLE_TABLEAU,tabNbPremiers,NB_COLONNE,'X');
+
+   listerTableau(taille,tabNbPremiers);
 
     // fin de programme
-    cout << "Presser ENTER pour quitter";
+    cout << "\nPresser ENTER pour quitter";
     cin.ignore(numeric_limits<streamsize>::max(), '\n');
  return EXIT_SUCCESS;
 }
