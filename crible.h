@@ -24,8 +24,10 @@ Compilateur    : Mingw-w64 g++ 11.2.0
 
 /**
  * @Nom                   : cribler
- * @But                   : Remplir un tableau de nombre consécutif en començant par le chiffre 2 puis éléminier chaque nombre
- *                          qui ne sont pas des nombre premiers jusqu'au nombre limite passé en paramètre
+ * @But                   : Remplir un tableau de nombre consécutif en començant
+ *                          par le chiffre 2 puis éléminier chaque nombre
+ *                          qui ne sont pas des nombre premiers jusqu'au nombre
+ *                          limite passé en paramètre
  * @param tabNbPremeiers  : Tableau de nombres premiers
  * @param taille          : Taille du tableau de nombres premiers
  * @param nbLimite        : Nombre jusqu'au quel il faut trouver les nombre premiers

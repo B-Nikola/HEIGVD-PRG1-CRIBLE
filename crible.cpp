@@ -29,7 +29,7 @@ Compilateur    : Mingw-w64 g++ 11.2.0
  * @param tab       : Tableau à remplir
  * @param taille    : Taille du tableau à remplir
  */
-void remplirTableau(int tab[], unsigned capacite);
+void remplirTableau(int tab[], unsigned taille);
 
 /**
  * @Nom             : chercherMultiple
@@ -62,22 +62,23 @@ void cribler(int tabNbPremiers[], unsigned& taille, unsigned nbLimite) {
    remplirTableau(tabNbPremiers, CAPACITE);
 
    unsigned pos = 0;
-   for (int diviseur = 2; diviseur <= taille; ++diviseur) {
-      while ( (pos = chercherMultiple(tabNbPremiers, taille, diviseur, pos)) != taille ) {
+   for (unsigned diviseur = 2; diviseur <= taille; ++diviseur) {
+      while ( (pos = chercherMultiple(tabNbPremiers, taille, (signed)diviseur, pos))
+         != taille ) {
          supprimerMultiple(tabNbPremiers, taille, pos);
          ++pos; // chercher à partir de la position suivant celle trouvée
       }
       pos = 0; // réinitialisation de la position
    }
 
-   for (int i = 0 ; i < taille; ++i) {
+   for (unsigned i = 0 ; i < taille; ++i) {
       std::cout << tabNbPremiers[i] << std::endl;
    }
 }
 
 void remplirTableau(int tab[], unsigned taille) {
    for (unsigned i = 0; i < taille; ++i) {
-      tab[i] = i + 2; // On remplit le tableau en commençant par 2
+      tab[i] = (int)i + 2 ; // On remplit le tableau en commençant par 2
    }
 }
 

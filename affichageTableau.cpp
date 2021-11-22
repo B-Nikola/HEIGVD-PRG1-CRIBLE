@@ -30,9 +30,9 @@ void afficherTableau(const int tab[], unsigned taille, unsigned nbColonne,
    int caseTableau = 0;
    const int ESPACE_AFFICHAGE = 3;
 
-   for ( int  ligne = 1; ligne <= taille; ) {
-      for (int colonne = 0; colonne < nbColonne; ++colonne) {
-         if (ligne==tab[caseTableau] )
+   for (unsigned ligne = 1; ligne <= taille; ) {
+      for (unsigned colonne = 0; colonne < nbColonne; ++colonne) {
+         if (ligne==(unsigned)tab[caseTableau])
          {
             std::cout << std::fixed <<std::left << std::setw(ESPACE_AFFICHAGE) << REPRESENTANT ;
             ++caseTableau;
@@ -46,10 +46,10 @@ void afficherTableau(const int tab[], unsigned taille, unsigned nbColonne,
 }
 
 
-void afficherTableau( unsigned taille, unsigned nbColonne){
+void afficherTableau(unsigned taille, unsigned nbColonne){
    const int ESPACE_AFFICHAGE = 3;
-   for ( int  ligne = 0; ligne < taille; ++ligne) {
-      for (int colonne = 0; colonne < nbColonne; ++colonne) {
+   for (unsigned ligne = 0; ligne < taille; ++ligne) {
+      for (unsigned colonne = 0; colonne < nbColonne; ++colonne) {
          std::cout << std::fixed <<std::left << std::setw(ESPACE_AFFICHAGE) << REPRESENTANT;
          ++ligne;
       }

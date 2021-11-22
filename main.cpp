@@ -43,7 +43,7 @@ int main() {
    const string   MSG_ERREUR = "Erreur veuillez saisir une valeur comprise dans les "
                              "limites ";
 
-   const unsigned int TAILLE_TABLEAU = (unsigned)saisieControlee( LIM_INFERIEUR,
+   const unsigned TAILLE_TABLEAU = (unsigned)saisieControlee( LIM_INFERIEUR,
                                                                   LIM_SUPERIEUR,
                                                                   MSG_SAISIE,
                                                                   MSG_ERREUR);
@@ -58,7 +58,7 @@ int main() {
 
    //Affichage
    cout << "initialisation du tableau" << endl;
-   afficherTableau(NB_COLONNE, TAILLE_TABLEAU);
+   afficherTableau(TAILLE_TABLEAU, NB_COLONNE);
    cout << endl<< "Criblage du tableau" << endl;
    afficherTableau(tabNbPremiers, TAILLE_TABLEAU, NB_COLONNE,'X');
 
