@@ -5,11 +5,12 @@ Nom du labo    : HEIGVD-PRG1-CRIBLE
 Auteur(s)      : Jérémie Métrailler, Nikola Bouattit
 Date creation  : 19.11.2021
 
-Description    : Librairie permettant àl'utilisateur d'utiliser la méthode du crible d'Eratosthène afin de trouver les
-                 les nombres premiers jusqu'au nombre qu'il aura spécifié
+Description    : Librairie permettant àl'utilisateur d'utiliser la méthode du crible
+                 d'Eratosthène afin de trouver les nombres premiers
+                 jusqu'au nombre qu'il aura spécifié
 
-Remarque(s)    : Cette librairie ne met à disposition qu'une seule fonction afin de simplifier au plus la tâche de
-                 l'utilisateur
+Remarque(s)    : Cette librairie ne met à disposition qu'une seule fonction afin
+                 de simplifier au plus la tâche de l'utilisateur
 
 Assertions     : n/a
 

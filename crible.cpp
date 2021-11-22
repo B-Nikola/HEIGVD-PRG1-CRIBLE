@@ -63,7 +63,7 @@ void cribler(int tabNbPremiers[], unsigned& taille, unsigned nbLimite) {
    unsigned pos = 0;
    for (unsigned diviseur = 2; diviseur <= taille; ++diviseur) {
       while ( (pos = chercherMultiple(tabNbPremiers, taille, (signed)diviseur, pos))
-         != taille ) {
+               != taille ) {
          supprimerMultiple(tabNbPremiers, taille, pos);
          ++pos; // chercher à partir de la position suivant celle trouvée
       }

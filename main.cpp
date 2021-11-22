@@ -44,9 +44,9 @@ int main() {
                              "limites ";
 
    const unsigned TAILLE_TABLEAU = (unsigned)saisieControlee( LIM_INFERIEUR,
-                                                                  LIM_SUPERIEUR,
-                                                                  MSG_SAISIE,
-                                                                  MSG_ERREUR);
+                                                              LIM_SUPERIEUR,
+                                                              MSG_SAISIE,
+                                                              MSG_ERREUR);
 
    int tabNbPremiers[TAILLE_TABLEAU];
    unsigned int taille = 0 ;
