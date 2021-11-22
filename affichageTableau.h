@@ -23,12 +23,12 @@ Compilateur    : Mingw-w64 g++ 11.2.0
 /**
  * Affiche une matrice ou pour chaque valeur du tableau fournis le signale par un
  * charactere spécial
- * @param taille Taille du tableau
  * @param tab Tableau a fournir
+ * @param taille Taille du tableau
  * @param nbColonne Nombre de colonne pour l'affichage
  * @param charSpecial Charactere spéciale pour signaler une valeur égale au tableau
  */
-void afficherTableau( unsigned taille, const int tab[] ,unsigned nbColonne = 10,
+void afficherTableau(const int tab[], unsigned taille, unsigned nbColonne = 10,
                       char charSpecial = 'X');
 /**
  * Affiche une matrice d'une certaine taille et colonne
@@ -38,10 +38,10 @@ void afficherTableau( unsigned taille, const int tab[] ,unsigned nbColonne = 10,
 void afficherTableau(unsigned taille, unsigned nbColonne=10);
 /**
  * Affiche tous les élément contenue dans un tableau
- * @param taille Nombre d'élément actuellement dans le tableau
  * @param tab Tableau de donnée a lire
+ * @param taille Nombre d'élément actuellement dans le tableau
  */
-void listerTableau(unsigned taille, const int tab[]);
+void listerTableau(const int tab[], unsigned taille);
 
 
 

@@ -53,12 +53,11 @@ unsigned chercherMultiple(const int tab[], unsigned taille, int diviseur,
  */
 void supprimerMultiple(int tab[], unsigned& taille, unsigned pos);
 
-void cribler(int tabNbPremiers[],unsigned nbLimite, unsigned& taille) {
-   // La capacité du tableau est égal au nombre limite - 1 car on commence à compter à partir de 1 mais le tableau
-   // sera rempli à partir du nombre 2 car 1 est une exception dans les nombre premiers
+void cribler(int tabNbPremiers[], unsigned& taille, unsigned nbLimite) {
+   // La capacité du tableau est égal au nombre limite - 1 car on commence à compter
+   // à partir de 1 mais le tableau sera rempli à partir du nombre 2 car 1 est une
+   // exception dans les nombre premiers
    const unsigned CAPACITE = nbLimite - 1;
-   //int tabNbPremiers[CAPACITE];--------------------> pour test
-   //unsigned taille = CAPACITE; // le tableau est plein
    taille = CAPACITE; // le tableau est plein
    remplirTableau(tabNbPremiers, CAPACITE);
 
@@ -78,7 +77,7 @@ void cribler(int tabNbPremiers[],unsigned nbLimite, unsigned& taille) {
 
 void remplirTableau(int tab[], unsigned taille) {
    for (unsigned i = 0; i < taille; ++i) {
-      tab[i] = i + 2;
+      tab[i] = i + 2; // On remplit le tableau en commençant par 2
    }
 }
 

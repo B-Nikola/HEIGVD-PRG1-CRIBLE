@@ -25,8 +25,8 @@ Compilateur    : Mingw-w64 g++ 11.2.0
 const char REPRESENTANT = '0'; // Charactere pour l'affichage de la matrice
 
 
-void afficherTableau( unsigned taille, const int tab[], unsigned nbColonne,
-                     char charSpecial  ){
+void afficherTableau(const int tab[], unsigned taille, unsigned nbColonne,
+                     char charSpecial){
    int caseTableau = 0;
    const int ESPACE_AFFICHAGE = 3;
 
@@ -57,7 +57,7 @@ void afficherTableau( unsigned taille, unsigned nbColonne){
    }
 }
 
-void listerTableau(unsigned taille, const int tab[]){
+void listerTableau(const int tab[], unsigned taille){
    std::cout << "il y a "<< taille << " nombres premiers qui sont : ";
    for (unsigned int i = 0; i < taille; ++i) {
       std::cout << tab[i] << " ";

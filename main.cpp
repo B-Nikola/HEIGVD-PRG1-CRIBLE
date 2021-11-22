@@ -53,16 +53,16 @@ int main() {
 
     //Criblage du tableau
    cribler( tabNbPremiers,
-            TAILLE_TABLEAU,
-            taille);
+            taille,
+            TAILLE_TABLEAU);
 
    //Affichage
    cout << "initialisation du tableau" << endl;
-   afficherTableau(TAILLE_TABLEAU,NB_COLONNE);
+   afficherTableau(NB_COLONNE, TAILLE_TABLEAU);
    cout << endl<< "Criblage du tableau" << endl;
-   afficherTableau(TAILLE_TABLEAU,tabNbPremiers,NB_COLONNE,'X');
+   afficherTableau(tabNbPremiers, TAILLE_TABLEAU, NB_COLONNE,'X');
 
-   listerTableau(taille,tabNbPremiers);
+   listerTableau(tabNbPremiers, taille);
 
     // fin de programme
     cout << "\nPresser ENTER pour quitter";
