@@ -3,7 +3,7 @@
 Nom du fichier : saisieUtilisateur.cpp
 Nom du labo    : HEIGVD-PRG1-CRIBLE
 Auteur(s)      : Jérémie Métrailler, Nikola Bouattit
-Date creation  : 10.11.2021
+Date creation  : 19.11.2021
 
 Description    : Fonction de saisie contrôlée. La saisie contrôlée
                  s'assure que la saisie corresponde exactement à ce qui est
