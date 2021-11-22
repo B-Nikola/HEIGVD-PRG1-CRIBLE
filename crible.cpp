@@ -21,7 +21,6 @@ Compilateur    : Mingw-w64 g++ 11.2.0
 -----------------------------------------------------------------------------------
 */
 #include "crible.h"
-#include <iostream>
 
 /**
  * @Nom             : remplirTableau
