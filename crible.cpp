@@ -70,10 +70,6 @@ void cribler(int tabNbPremiers[], unsigned& taille, unsigned nbLimite) {
       }
       pos = 0; // réinitialisation de la position
    }
-
-   for (unsigned i = 0 ; i < taille; ++i) {
-      std::cout << tabNbPremiers[i] << std::endl;
-   }
 }
 
 void remplirTableau(int tab[], unsigned taille) {
