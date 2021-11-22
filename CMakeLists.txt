@@ -7,7 +7,7 @@ set(CMAKE_CXX_FLAGS "-Wall -Wextra -Wconversion -Wsign-conversion -pedantic")
 add_executable(HEIGVD_PRG1_CRIBLE main.cpp
                                   saisieUtilisateur.h
                                   saisieUtilisateur.cpp
-                                  affichageTableau.h
-                                  affichageTableau.cpp
                                   crible.h
-                                  crible.cpp)
+                                  crible.cpp
+                                  affichageTableau.h
+                                  affichageTableau.cpp)

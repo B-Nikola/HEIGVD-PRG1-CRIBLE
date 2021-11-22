@@ -38,7 +38,7 @@ int main() {
 
    const int      LIM_INFERIEUR = 2;
    const int      LIM_SUPERIEUR = 100;
-   const int      NB_COLONNE    = 10;
+   const int      NB_COLONNE    = 7;
    const string   MSG_SAISIE = "Veuiller rentrer le nombre de valeur a generer ";
    const string   MSG_ERREUR = "Erreur veuillez saisir une valeur comprise dans les "
                              "limites ";
@@ -60,9 +60,9 @@ int main() {
    cout << "initialisation du tableau" << endl;
    afficherTableau(TAILLE_TABLEAU, NB_COLONNE);
    cout << endl<< "Criblage du tableau" << endl;
-   afficherTableau(tabNbPremiers, TAILLE_TABLEAU, NB_COLONNE,'X');
-
-   listerTableau(tabNbPremiers, taille);
+   afficherTableau(tabNbPremiers,TAILLE_TABLEAU,NB_COLONNE,'X');
+   cout << "il y a "<< taille << " nombres premiers qui sont : ";
+   ecrireTableau(taille,tabNbPremiers);
 
     // fin de programme
     cout << "\nPresser ENTER pour quitter";

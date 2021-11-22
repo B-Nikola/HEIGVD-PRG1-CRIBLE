@@ -20,6 +20,7 @@ Compilateur    : Mingw-w64 g++ 11.2.0
 
 #ifndef HEIGVD_PRG1_CRIBLE_AFFICHAGETABLEAU_H
 #define HEIGVD_PRG1_CRIBLE_AFFICHAGETABLEAU_H
+
 /**
  * Affiche une matrice ou pour chaque valeur du tableau fournis le signale par un
  * charactere spécial
@@ -41,7 +42,7 @@ void afficherTableau(unsigned taille, unsigned nbColonne=10);
  * @param tab Tableau de donnée a lire
  * @param taille Nombre d'élément actuellement dans le tableau
  */
-void listerTableau(const int tab[], unsigned taille);
+void ecrireTableau(unsigned taille, const int tab[]);
 
 
 
