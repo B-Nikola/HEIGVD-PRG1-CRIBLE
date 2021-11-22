@@ -21,7 +21,6 @@ Compilateur    : Mingw-w64 g++ 11.2.0
 -----------------------------------------------------------------------------------
 */
 #include "crible.h"
-#include <iostream>
 
 /**
  * @Nom             : remplirTableau
@@ -69,10 +68,6 @@ void cribler(int tabNbPremiers[], unsigned& taille, unsigned nbLimite) {
          ++pos; // chercher à partir de la position suivant celle trouvée
       }
       pos = 0; // réinitialisation de la position
-   }
-
-   for (unsigned i = 0 ; i < taille; ++i) {
-      std::cout << tabNbPremiers[i] << std::endl;
    }
 }
 
